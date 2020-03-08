@@ -1,0 +1,109 @@
+@import "~normalize.css";
+@import "~highlight.js/styles/dracula.css";
+
+/* START GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+body > div {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+/* END GLOBAL */
+
+.editor {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.editor-header {
+  background: #21232c;
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  width: 100%;
+}
+
+.editor-header .save-message {
+  border: 0;
+  color: #fff;
+  padding: 0 20px;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+textarea,
+.view {
+  height: calc(100% - 40px);
+  min-width: 40%;
+  max-width: 40%;
+}
+
+textarea {
+  border: solid 4px #08aebd;
+  font-family: monospace;
+  font-size: 18px;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: 0 none;
+}
+
+.view {
+  background: #282a36;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: auto;
+  padding: 10px;
+}
+
+.input-title {
+  padding: 0 10px;
+}
+
+/* FILES LIST */
+.files-list-container {
+  min-width: 20%;
+  max-width: 20%;
+  background-color: #08aebd;
+  padding: 10px;
+}
+
+.files-list-container ul {
+  list-style: none;
+}
+
+.files-list-container ul > li > button {
+  margin-left: -20px;
+  background-color: #63dbe6;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.files-list-container ul > li > button:hover {
+  background-color: #00a5b4;
+  transition: all ease-out 0.2s;
+}
+
+.files-list-container ul > li > button:active {
+  background-color: #004e55;
+}
